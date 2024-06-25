@@ -1,0 +1,101 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    background: rgb(36, 36, 36);
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
+.nav img {
+    width: 100px;
+    height: 100px;
+}
+
+.nav h1 {
+    color: red;
+    text-shadow: 2px 1px 2px rgb(48, 47, 47);
+}
+
+.nav h3 {
+    color: white;
+}
+
+#contenedor {
+    width: 100%;
+    height: 800px;
+}
+
+.leaflet-popup-content-wrapper {
+    width: 500px;
+}
+
+.leaflet-control-layers {
+
+    width: 25vw;
+    height: 20vh;
+    font-size: 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-control-layers-expanded .leaflet-control-layers-list {
+    max-height: 200px;
+    /* Altura máxima del listado de capas */
+    overflow-y: auto;
+    /* Activar scroll vertical si hay muchas capas */
+}
+
+.leaflet-control-layers-toggle {
+    background-color: #fff;
+    /* Color de fondo del botón de expansión */
+    color: #333;
+    /* Color del texto del botón de expansión */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-control-layers-overlays label {
+    font-weight: normal;
+    /* Estilo del texto de las etiquetas de las capas */
+    padding: 3px 10px;
+}
+
+.leaflet-control-layers-overlays label:hover {
+    background-color: #eaeaea;
+    /* Color de fondo al pasar el mouse sobre una etiqueta */
+    cursor: pointer;
+    /* Cambiar cursor al pasar el mouse sobre una etiqueta */
+}
+
+.leaflet-control-layers-selector input {
+    width: 53px;
+}
+
+footer {
+    display: flex;
+  justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 15vh;
+    background: rgb(36, 36, 36);
+    font-size: 1rem;
+    color:red;
+}
+
+
+.logo1{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
