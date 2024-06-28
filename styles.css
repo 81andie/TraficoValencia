@@ -1,34 +1,46 @@
 * {
-
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 .nav {
-    background: rgb(36, 36, 36);
+    background: rgb(225, 224, 224);
     display: flex;
+    text-align: left;
     padding: 10px;
-    gap: 20px;
+    gap: 30px;
+
 }
+
+.contenedor-subs-nav {
+    display: flex;
+    width: 100%;
+   justify-content: center;
+   align-items: flex-end;
+}
+
+
 
 .nav img {
     width: 100px;
     height: 100px;
+    border-radius: 35px;
 }
 
 .nav h1 {
-    color: red;
-    text-shadow: 2px 1px 2px rgb(48, 47, 47);
+    color: rgb(71, 70, 70);
+    text-shadow: 2px 1px 2px rgb(248, 248, 248);
 }
 
 .nav h3 {
-    color: white;
+    color: rgb(67, 66, 66);
 }
 
 #contenedor {
     width: 100%;
-    height: 800px;
+    height: 774px;
 }
 
 .leaflet-popup-content-wrapper {
@@ -37,8 +49,8 @@
 
 .leaflet-control-layers {
 
-    width: 25vw;
-    height: 20vh;
+    width: 28vw;
+    height: 23vh;
     font-size: 1.5rem;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -47,21 +59,19 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
+
+
 .leaflet-control-layers-expanded .leaflet-control-layers-list {
-    max-height: 200px;
+    max-height: 300px;
     /* Altura máxima del listado de capas */
-    overflow-y: auto;
+    visibility: visible;
+    
     /* Activar scroll vertical si hay muchas capas */
 }
 
-.leaflet-control-layers-toggle {
-    background-color: #fff;
-    /* Color de fondo del botón de expansión */
-    color: #333;
-    /* Color del texto del botón de expansión */
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+.leaflet-control-layers-expanded {
+    display: block !important;
 }
 
 .leaflet-control-layers-overlays label {
@@ -77,25 +87,35 @@
     /* Cambiar cursor al pasar el mouse sobre una etiqueta */
 }
 
-.leaflet-control-layers-selector input {
-    width: 53px;
+
+.linea{
+    width: 40px;
+    height: 8px;
+    background-color: blue;
 }
 
-footer {
-    display: flex;
-  justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    height: 15vh;
-    background: rgb(36, 36, 36);
-    font-size: 1rem;
-    color:red;
+.leaflet-control-layers-overlays input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+
+}
+
+.datos{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.leaflet-container a{
+   font-size: 30px;
 }
 
 
-.logo1{
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
-    margin-top: 20px;
+
+.leaflet-tooltip-div-icon {
+    background-color: none;
+    border: none;
+    box-shadow: none;
+    font-size: 8px;
+    color: red;
+    line-height: 1;
 }
