@@ -31,7 +31,11 @@ var transito = L.geoJson(transit, {
 
 
 
-
+var markers = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+            showCoverageOnHover: false,
+            zoomToBoundsOnClick: true
+});
 
 
 var camarasTrafic = L.geoJson(camaras, {
@@ -39,19 +43,19 @@ var camarasTrafic = L.geoJson(camaras, {
         // Crear un ícono basado en un div
         var customIcon = L.divIcon({
             className: 'custom-div-icon', // Clase personalizada para el ícono
-            html: '<i class="fas fa-video" style="font-size: 18px; color: red;"></i>', // HTML del ícono
-            iconSize: [20, 20], // Tamaño del ícono
-            iconAnchor: [10, 10] // Anclaje del ícono
+            html: '<i class="fas fa-video" style="font-size: 13px; color: red;"></i>', // HTML del ícono
+            iconSize: [1, 1], // Tamaño del ícono
+            iconAnchor: [1, 1] // Anclaje del ícono
         });
+
+       
 
         // Crear un marcador con el ícono personalizado
         var marker = L.marker(latlng, {
             icon: customIcon
-        }).bindTooltip('<i class="fas fa-video" style="font-size: 18px; color: red;"></i>', {
-            className: 'leaflet-tooltip-div-icon',
-            permanent: true,
-            direction: 'center'
         });
+
+        markers.addLayer(marker);
 
         return marker;
     }
@@ -67,7 +71,20 @@ var camarasTrafic = L.geoJson(camaras, {
     return `<h1>${descripcion}</h1>
     <iframe src="${popup}" width="450" height="600" frameborder="0" allowfullscreen></iframe>`;
 
+
 }).addTo(mapa);
+
+
+
+mapa.addLayer(markers);
+
+
+
+
+
+
+
+L.Control.geocoder().addTo(mapa);
 
 
 
@@ -87,11 +104,11 @@ style.innerHTML = `
         padding: 5px;
         margin-bottom: 5px;
         align-items: center;
-        gap:15px;
+        gap:10px;
         font-size: 16px;
     }
     .leaflet-control-layers-overlays label span.legend-item {
-        margin-left: 10px;
+        margin-left: 5px;
         font-size: 16px;
         color: #666;
     }
@@ -102,11 +119,16 @@ document.head.appendChild(style);
 L.control.scale().addTo(mapa);
 
 
+//markers clusters
 
 
 
 
-v
+
+
+
+
+
 
 
 

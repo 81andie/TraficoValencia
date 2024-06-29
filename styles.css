@@ -11,7 +11,8 @@
     text-align: left;
     padding: 10px;
     gap: 30px;
-
+    border-bottom: 2px solid rgb(221, 218, 218);
+    
 }
 
 .contenedor-subs-nav {
@@ -20,7 +21,6 @@
    justify-content: center;
    align-items: flex-end;
 }
-
 
 
 .nav img {
@@ -119,3 +119,9 @@
     color: red;
     line-height: 1;
 }
+
+
+.leaflet-control-geocoder-form{
+    width: 500px;
+    padding: 15px;
+    font-size: 16px;}
