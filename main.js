@@ -62,7 +62,7 @@ var camarasTrafic = L.geoJson(camaras, {
     
         var popup = L.popup()
             .setContent(`<h1>${descripcion}</h1>
-        <iframe src="${url}" width="450" height="600" frameborder="0" allowfullscreen></iframe>`);
+        <iframe src="${url}" width="450" height="600" frameborder="0"   allowfullscreen></iframe>`);
 
         marker.bindPopup(popup)
 
@@ -114,15 +114,14 @@ var style = document.createElement('style');
 style.innerHTML = `
     .leaflet-control-layers-overlays label span {
         display: flex;
-        padding: 5px;
-        margin-bottom: 5px;
+       padding: 2px;
         align-items: center;
-        gap:10px;
-        font-size: 16px;
+       
+        gap: 2px;
     }
     .leaflet-control-layers-overlays label span.legend-item {
-        margin-left: 5px;
-        font-size: 16px;
+      
+
         color: #666;
     }
 `;

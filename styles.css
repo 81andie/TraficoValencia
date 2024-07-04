@@ -45,26 +45,27 @@
 }
 
 .leaflet-popup-content-wrapper {
-    width: 500px;
+    width: 690px;
 }
 
 .leaflet-control-layers {
 
     width: 28vw;
     height: 24vh;
-    font-size: 1.5rem;
+  
     border: 2px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
+   
     font-family: Arial, sans-serif;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Puedes ajustar esta distancia según sea necesario */
 }
 
 
 
 
 .leaflet-control-layers-expanded .leaflet-control-layers-list {
-    max-height: 300px;
+  
     /* Altura máxima del listado de capas */
     visibility: visible;
     
@@ -78,7 +79,7 @@
 .leaflet-control-layers-overlays label {
     font-weight: normal;
     /* Estilo del texto de las etiquetas de las capas */
-    padding: 3px 10px;
+   
 }
 
 .leaflet-control-layers-overlays label:hover {
@@ -100,6 +101,8 @@
     height: 30px;
 
 }
+
+
 
 .datos{
     font-size: 20px;
