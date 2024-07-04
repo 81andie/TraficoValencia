@@ -4,16 +4,16 @@ import { camaras } from "./Data/CamarasTransit.js";
 
 //https://tile.openstreetmap.org/{z}/{x}/{y}.png?
 
-var mapa = L.map('contenedor').setView([39.469714023341325, -0.3944883294626695],13);
+var mapa = L.map('contenedor').setView([39.469714023341325, -0.3944883294626695], 13);
 
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png?", {
-    attribution: '<span class="datos">Datos cedidos por el Portal de Datos Abiertos del Ayuntamiento de València</span'
+    attribution: '<span class="datos">Fuentes del Portal de Datos Abiertos del Ayuntamiento de València</span'
 }).addTo(mapa);
 
 console.log(mapa);
 
 var transito = L.geoJson(transit, {
-    color: "blue",
+    color: "#3da3e8",
     fillColor: "white",
     fillOpacity: 0.5
 
@@ -29,12 +29,14 @@ var transito = L.geoJson(transit, {
 
 }).addTo(mapa);
 
-
+//tengo los marcadores que tienen que tener cluster
+//tengo el geojson
+//no muestro el geojson, muestro el cluster
 
 var markers = L.markerClusterGroup({
     spiderfyOnMaxZoom: true,
-            showCoverageOnHover: false,
-            zoomToBoundsOnClick: true
+    showCoverageOnHover: false,
+    zoomToBoundsOnClick: true
 });
 
 
@@ -48,31 +50,37 @@ var camarasTrafic = L.geoJson(camaras, {
             iconAnchor: [1, 1] // Anclaje del ícono
         });
 
-       
+
 
         // Crear un marcador con el ícono personalizado
         var marker = L.marker(latlng, {
             icon: customIcon
         });
 
+        let url = feature.properties.url;
+        let descripcion = feature.properties.descripcio;
+    
+        var popup = L.popup()
+            .setContent(`<h1>${descripcion}</h1>
+        <iframe src="${url}" width="450" height="600" frameborder="0" allowfullscreen></iframe>`);
+
+        marker.bindPopup(popup)
+
         markers.addLayer(marker);
 
         return marker;
     }
-  
+
 
 }).bindPopup(function (layer) {
 
     console.log(layer.feature.properties.descripcio);
 
-    let popup = layer.feature.properties.url;
-    let descripcion = layer.feature.properties.descripcio;
-
-    return `<h1>${descripcion}</h1>
-    <iframe src="${popup}" width="450" height="600" frameborder="0" allowfullscreen></iframe>`;
+    
+    return ;
 
 
-}).addTo(mapa);
+});
 
 
 
@@ -96,7 +104,7 @@ var geocoder = L.Control.geocoder({
 
 var overlayMaps = {
     "<div class='linea'></div><span>Zonas con más transito</span><br><span class='legend-item'>Zona dónde se concentra la mayor concentración de tráfico</span>": transito,
-    '<i class="fas fa-video" style="font-size: 18px; color: red;"></i><span> Visualizar Cámaras</span><br><span class="legend-item">Visualización y lugar de todas las cámaras de tráfico</span>': camarasTrafic
+    '<i class="fas fa-video" style="font-size: 18px; color: red;"></i><span> Visualizar Cámaras</span><br><span class="legend-item">Visualización y lugar de todas las cámaras de tráfico</span>': markers
 };
 
 L.control.layers(null, overlayMaps, { collapsed: false }).addTo(mapa);
@@ -145,8 +153,8 @@ L.control.scale().addTo(mapa);
 
 
 
-   
-    
+
+
 
 
 
