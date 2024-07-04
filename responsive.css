@@ -40,14 +40,22 @@
     }
 
     .leaflet-popup-content {
-        width: 690px;
-        height: 500px;
+        width: 590px;
+        height: 400px;
+        overflow-y: auto;
+    
     }
+     
 
+
+   .video {
+        width: 390px;
+        height: 300px;
+    }
    
     
     .leaflet-control-layers {
-  z-index:800;
+  
         overflow-y: scroll;
         width: 19vw;
         height: 35vh;
@@ -56,7 +64,7 @@
         border-radius: 5px;
         margin-left: 10px;
         font-family: Arial, sans-serif;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 5px #0000001a;
     }
     
     .leaflet-control-layers-overlays label span {
@@ -73,13 +81,7 @@
     }
   
    
-    iframe{
-        width: 100%;
-       height: 400px;
-       z-index: 2000;
-    }
-   
-   
+}
 
 
 @media (min-width:481px) {}
