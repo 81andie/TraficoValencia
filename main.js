@@ -62,7 +62,7 @@ var camarasTrafic = L.geoJson(camaras, {
     
         var popup = L.popup()
             .setContent(`<h1>${descripcion}</h1>
-        <iframe src="${url}" width="450" height="600" frameborder="0"  class="video" allowfullscreen></iframe>`);
+        <iframe src="${url}" width="410" height="300" frameborder="0" class="videos" allowfullscreen></iframe>`);
 
         marker.bindPopup(popup)
 

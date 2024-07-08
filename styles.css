@@ -44,8 +44,12 @@
     height: 774px;
 }
 
-.leaflet-popup-content-wrapper {
-    width: 690px;
+.leaflet-popup-content {
+    width: 180px;
+}
+
+.leaflet-popup-content-wrapper{
+    width: 500px;
 }
 
 .leaflet-control-layers {
