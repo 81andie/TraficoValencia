@@ -116,7 +116,7 @@ style.innerHTML = `
         display: flex;
        padding: 2px;
         align-items: center;
-       
+        font-size: 1rem;
         gap: 2px;
     }
     .leaflet-control-layers-overlays label span.legend-item {
