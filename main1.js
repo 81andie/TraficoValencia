@@ -40,7 +40,7 @@ var camarasTrafic = L.geoJson(camaras, {
             var url = feature.properties.url;
             var descripcion = feature.properties.descripcio;
             var content = `<h2>${descripcion}</h2>
-                           <iframe src="${url}" width="360" height="370" frameborder="0" class="videos" allowfullscreen></iframe>`;
+                           <iframe src="${url}" width="260" height="370" frameborder="0" class="videos" allowfullscreen></iframe>`;
             document.getElementById('sidebar-content').innerHTML = content;
             sidebar.open('home');
         });
