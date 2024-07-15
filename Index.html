@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 
 
+
     <!--CLUSTERS-->
     <link rel="stylesheet" href="./dist/MarkerCluster.css">
     <link rel="stylesheet" href="./dist/MarkerCluster.Default.css">
+
+
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +37,11 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
 
+        
+    <!--sidebar-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-sidebar-v2/css/leaflet-sidebar.css" />
 
+   
     <title>Mapa movilidad </title>
 </head>
 
@@ -60,13 +67,40 @@
 
     <div id="contenedor">
 
+       
+    
     </div>
 
+    <div id="sidebar" class="leaflet-sidebar collapsed">
+        <div class="leaflet-sidebar-tabs">
+            <ul role="tablist">
+                <li><a href="#home" role="tab"><i class="fa fa-home"></i></a></li>
+                <li><a href="#" role="tab"><i class="fa fa-times"></i></a></li>
+            </ul>
+        </div>
+        <div class="leaflet-sidebar-content">
+            <div class="leaflet-sidebar-pane" id="home">
+                <h1>Sidebar</h1>
+                <div id="sidebar-content">No content yet.</div>
+            </div>
+        </div>
+    </div>
 
-    <script type="module" src="main.js"></script>
+   
+    
+
+    
+
+
+   <!--<script type="module" src="main.js"></script>-->
+   <script type="module" src="main1.js"></script>
+
+
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     <script src="./dist/leaflet.markercluster.js"></script>
-
+    <script src="https://unpkg.com/leaflet-sidebar-v2/js/leaflet-sidebar.js"></script>
+   
+    
 </body>
 
 </html>

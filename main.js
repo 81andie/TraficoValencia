@@ -131,7 +131,7 @@ document.head.appendChild(style);
 L.control.scale().addTo(mapa);
 
 
-//markers clusters
+
 
 
 

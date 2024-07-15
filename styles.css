@@ -25,9 +25,9 @@
 }
 
 
-.nav img {
-    width: 100px;
-    height: 100px;
+.logo{
+    width: 25%;
+    height: 25%;
     border-radius: 35px;
 }
 
@@ -47,54 +47,6 @@
     height: calc(100vh - 120px);
 }
 
-.leaflet-popup-content {
-    width: 180px;
-}
-
-.leaflet-popup-content-wrapper{
-    width: 500px;
-}
-
-.leaflet-control-layers {
-
-    width: 28vw;
-    height: 24vh;
-  
-    border: 2px solid #ccc;
-    border-radius: 5px;
-   
-    font-family: Arial, sans-serif;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Puedes ajustar esta distancia según sea necesario */
-}
-
-
-
-
-.leaflet-control-layers-expanded .leaflet-control-layers-list {
-  
-    /* Altura máxima del listado de capas */
-    visibility: visible;
-    
-    /* Activar scroll vertical si hay muchas capas */
-}
-
-.leaflet-control-layers-expanded {
-    display: block !important;
-}
-
-.leaflet-control-layers-overlays label {
-    font-weight: normal;
-    /* Estilo del texto de las etiquetas de las capas */
-   
-}
-
-.leaflet-control-layers-overlays label:hover {
-    background-color: #eaeaea;
-    /* Color de fondo al pasar el mouse sobre una etiqueta */
-    cursor: pointer;
-    /* Cambiar cursor al pasar el mouse sobre una etiqueta */
-}
 
 
 .linea{
@@ -112,12 +64,12 @@
 
 
 .datos{
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 10px;
 }
 
 .leaflet-container a{
-   font-size: 14px;
+   font-size: 13px;
 }
 
 
@@ -136,3 +88,5 @@
     width: 500px;
     padding: 15px;
     font-size: 16px;}
+
+    sidebar
