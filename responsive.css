@@ -59,13 +59,7 @@
     }
   
 
-    .cabecera_logo{
-      
-        height: 70px;
-        width: 100%;
-        text-align:left;
-    }
-    
+  
    
    
 
@@ -81,6 +75,29 @@
         width: 100%;
         
     }
+
+    .logo {
+         width: 13%;
+         height: auto;
+    }
+
+    .contenedor-nav h1{
+        font-size: 2rem;
+    }
+
+    .traffic_cabecera{
+        height: 4vh;
+        
+    }
+    
+    .logo1{
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+    }
+    
+   
+    
 
     
 }
