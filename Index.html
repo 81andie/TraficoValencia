@@ -23,24 +23,25 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/af64402f5c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-
     <header>
-        <div class="nav">
-            <img src="./img/Traffic.png" class="logo" alt="Traffic Logo" />
-            <div class="contenedor-nav">
-                <h1>TRAFFIC VALENCIA APP</h1>
+        <div class="nav w-full flex flex-row justify-center items-center">
+            <img src="./img/Traffic.png" class="w-20 h-20 rounded-lg mt-2 ml-2" alt="Traffic Logo" />
+            <div class="contenedor-nav w-full ml-2">
+                <h1 class="text-2xl font-bold bg-slate-50">TRAFFIC VALENCIA APP</h1>
                 <h3>A dia 25/6/2024</h3>
             </div>
         </div>
     </header>
+    <div class="datos"></div>
 
-    <div id="contenedor"> </div>
+    <div id="contenedor"></div>
     <div id="sidebar" class="sidebar">
         <div class="sidebar-header">
-           
+           <p class="w-full">Datos</p>
             <button id="closeSidebar">×</button>
             
         </div>

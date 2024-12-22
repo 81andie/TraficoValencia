@@ -2,15 +2,12 @@ import { transit } from "./Data/TransitReal.js";
 import { camaras } from "./Data/CamarasTransit.js";
 
 
-
-
-
 document.getElementById('closeSidebar').addEventListener('click', function() {
     document.getElementById('sidebar').style.width = '0';
     document.getElementById('main-content').style.marginLeft = '0';
 });
 
-
+// <iframe src="${url}"  overflow="hidden" height="560" frameborder="0" allowfullscreen class="w-full"></iframe>
 
 
 // Inicializar el mapa
@@ -58,21 +55,19 @@ var camarasTrafic = L.geoJson(camaras, {
             var coordenadas1 = feature.properties.geo_point_2d.lat;
 
             var content = `
-                <div class="containerInfo_camara">
-                    <h3>Lugar de la cámara:</h3>
+                <div class="containerInfo_camara w-80 ml-2">
+                    <h3 class="font-bold">Lugar de la cámara:</h3>
                     <h2>${descripcion}</h2>
                 </div>
-                <div class="containerInfo_angulo">
-                    <h3>Angulo:</h3>
+                <div class="containerInfo_angulo w-80 ml-2">
+                    <h3 class="text-bold">Angulo:</h3>
                     <h2>${angulo}</h2>
                 </div>
 
-                <div class="containerInfo_angulo">
-                    <h3>Coordenadas 2d:</h3>
-                    <h2>Lon:${coordenadas}</h2>
-                    <h2>Lat:${coordenadas1}</h2>
-                </div>
-                <iframe src="${url}" width="480px" overflow="hidden" height="560" frameborder="0" allowfullscreen></iframe>`;
+ <iframe src="${url}"  overflow="hidden"  frameborder="0" allowfullscreen></iframe>
+              
+
+               `;
                 document.getElementById('sidebar-content').innerHTML = content;
                 document.getElementById('sidebar').style.width = '480px'; // Abre el sidebar
                
