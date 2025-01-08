@@ -27,17 +27,7 @@
 
     }
 
-.containerInfo_camara,
-.containerInfo_angulo {
-    display: flex;
-    flex-direction: column;
-    width: 320px;
-    background-color: rgb(250, 194, 187);
-    padding: 10px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    border: 2px inset #ff0000;
-}
+
   
 
   

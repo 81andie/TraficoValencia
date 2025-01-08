@@ -5,8 +5,6 @@
     font-family: "Roboto", sans-serif;
 }
 
-
-
 #contenedor {
     position: absolute;
     top: 120px;
@@ -14,7 +12,6 @@
     height: calc(100vh - 120px);
     z-index:100;
 }
-
 
 
 .linea {
@@ -27,7 +24,6 @@
     width: 30px;
     height: 30px;
  
-
 }
 
 .datos {
@@ -61,18 +57,17 @@
 
 .traffic_cabecera {
     height: 4vh;
-
 }
 
 
 #sidebar {
     width: 0;
-    height: 80vh;
+    height: 90vh;
     position: fixed;
-    top: 20;
+    top: 30;
     left: 0;
     background-color: #f8f3f3;
-    overflow-x: hidden;
+    overflow-y:visible;
     transition: 0.3s;
     padding-top: 3px;
     color: rgb(11, 11, 11);
@@ -83,24 +78,25 @@
 
 
 #openSidebar {
+  
     font-size: 20px;
     cursor: pointer;
     position: fixed;
     top: 0px;
-    left: 15px;
+    left: 13px;
     background: none;
     border: none;
     color: #060505;
-    z-index: 1000;
+    z-index: 100;
+ 
 }
 
+.sidebar-header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
 
-.containerInfo_camara,
-.containerInfo_angulo {
-    
-    background-color: rgb(250, 194, 187);
-    padding: 10px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    border: 2px inset #ff0000;
+.video{
+    overflow-y:hidden;
 }

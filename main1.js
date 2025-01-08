@@ -2,7 +2,7 @@ import { transit } from "./Data/TransitReal.js";
 import { camaras } from "./Data/CamarasTransit.js";
 
 
-document.getElementById('closeSidebar').addEventListener('click', function() {
+document.getElementById('closeSidebar').addEventListener('click', function () {
     document.getElementById('sidebar').style.width = '0';
     document.getElementById('main-content').style.marginLeft = '0';
 });
@@ -28,6 +28,8 @@ var transito = L.geoJson(transit, {
     return `<div>Dirección: ${popup}</div>`;
 }).addTo(mapa);
 
+
+
 // Inicializar grupo de marcadores
 var markers = L.markerClusterGroup({
     spiderfyOnMaxZoom: true,
@@ -47,7 +49,7 @@ var camarasTrafic = L.geoJson(camaras, {
 
         var marker = L.marker(latlng, { icon: customIcon });
 
-        marker.on('click', function() {
+        marker.on('click', function () {
             var url = feature.properties.url;
             var descripcion = feature.properties.descripcio;
             var angulo = feature.properties.angulo;
@@ -55,24 +57,36 @@ var camarasTrafic = L.geoJson(camaras, {
             var coordenadas1 = feature.properties.geo_point_2d.lat;
 
             var content = `
-                <div class="containerInfo_camara w-80 ml-2">
-                    <h3 class="font-bold">Lugar de la cámara:</h3>
+<div  class="p-2">
+    <h3 class="font-bold mb-2">Leyenda:</h3>
+    <div class="legend-item flex items-center mb-2">
+        <div class="ml-4 w-5 h-5 bg-blue-500 border border-black mr-2"></div>
+        <span>Líneas azules: Representan el tráfico</span>
+    </div>
+</div>
+          
+                <div class="w-96 ml-2">
+                 <h3 class="font-bold">Lugar de la cámara:</h3>
+                  <div class="flex justify-start p-2 gap-2 ml-2">
+                    <i class="fas fa-video text-red-500"></i>
                     <h2>${descripcion}</h2>
+                  </div>
+                   
+           
+                    
                 </div>
-                <div class="containerInfo_angulo w-80 ml-2">
-                    <h3 class="text-bold">Angulo:</h3>
-                    <h2>${angulo}</h2>
-                </div>
+                
 
- <iframe src="${url}"  overflow="hidden"  frameborder="0" allowfullscreen></iframe>
-              
+                
+                <iframe src="${url}"  overflow="hidden"  class="-ml-10  w-full h-96 p-2 mt-3 video" frameborder="0" allowfullscreen></iframe>
+            
 
                `;
-                document.getElementById('sidebar-content').innerHTML = content;
-                document.getElementById('sidebar').style.width = '480px'; // Abre el sidebar
-               
-            
-          
+            document.getElementById('sidebar-content').innerHTML = content;
+            document.getElementById('sidebar').style.width = '480px'; // Abre el sidebar
+
+
+
         });
 
         markers.addLayer(marker);
@@ -92,7 +106,7 @@ var geocoder = L.Control.geocoder({
 
 
 
-mapa.on('click', function(e) {
+mapa.on('click', function (e) {
     if (document.getElementById('sidebar').style.width === '0px' && !e.originalEvent.target.closest('#sidebar')) {
         document.getElementById('sidebar').style.width = '0';
         document.getElementById('main-content').style.marginLeft = '0';
