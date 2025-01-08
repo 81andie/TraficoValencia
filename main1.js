@@ -105,11 +105,22 @@ var geocoder = L.Control.geocoder({
 }).addTo(mapa);
 
 
+document.getElementById('closeSidebar').addEventListener('click', function () {
+    // Cierra el sidebar
+    document.getElementById('sidebar').style.width = '0';
+    document.getElementById('main-content').style.marginLeft = '0';
+
+    // Limpia el contenido del sidebar
+    document.getElementById('sidebar-content').innerHTML = '';
+});
+
+
 
 mapa.on('click', function (e) {
     if (document.getElementById('sidebar').style.width === '0px' && !e.originalEvent.target.closest('#sidebar')) {
         document.getElementById('sidebar').style.width = '0';
         document.getElementById('main-content').style.marginLeft = '0';
+        document.getElementById('sidebar-content').innerHTML = '';
     }
 });
 
