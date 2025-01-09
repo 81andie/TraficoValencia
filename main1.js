@@ -74,8 +74,10 @@ var camarasTrafic = L.geoJson(camaras, {
                 </div>
                 
 
-                
-                <iframe src="${url}"  overflow="hidden"  class="-ml-10  w-full h-96 p-2 mt-3 video" frameborder="0" allowfullscreen></iframe>
+                <div class="flex mt-5 w-full justify-center">
+                 <a href="${url}" class="bg-blue-100 p-2" "target="_blank">Ver video</a>
+                </div>
+              
             
 
                `;
