@@ -2,10 +2,7 @@ import { transit } from "./Data/TransitReal.js";
 import { camaras } from "./Data/CamarasTransit.js";
 
 
-document.getElementById('closeSidebar').addEventListener('click', function () {
-    document.getElementById('sidebar').style.width = '0';
-    document.getElementById('main-content').style.marginLeft = '0';
-});
+
 
 // <iframe src="${url}"  overflow="hidden" height="560" frameborder="0" allowfullscreen class="w-full"></iframe>
 
@@ -83,7 +80,7 @@ var camarasTrafic = L.geoJson(camaras, {
 
                `;
             document.getElementById('sidebar-content').innerHTML = content;
-            document.getElementById('sidebar').style.width = '480px'; // Abre el sidebar
+            document.getElementById('sidebar').style.width = '410px'; // Abre el sidebar
 
 
 
