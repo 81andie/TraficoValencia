@@ -1,39 +1,8 @@
 @media (min-width:320px) {
    
-  
-
     #contenedor {
         width: 100%;
     }
-
-    .leaflet-control-layers {
-        width: 39vw;
-        height: 35vh;
-        font-size: 0.6rem;
-        margin-left: 10px;
-    
-    }
-    
-    .leaflet-control-layers-overlays label span {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 9px;
-    }
-
-    .leaflet-control-layers-overlays input[type="checkbox"]{
-        width: 20px;
-        height: 30px;
-
-    }
-
-
-  
-
-  
-   
-   
-
 
 }
 
@@ -57,11 +26,5 @@
 
     }
 
-    .leaflet-control-layers-overlays label span {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-size: 9px;
-      
-}
+
 }
