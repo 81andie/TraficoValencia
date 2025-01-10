@@ -4,9 +4,6 @@ import { camaras } from "./Data/CamarasTransit.js";
 
 
 
-// <iframe src="${url}"  overflow="hidden" height="560" frameborder="0" allowfullscreen class="w-full"></iframe>
-
-
 // Inicializar el mapa
 var mapa = L.map('contenedor').setView([39.469714023341325, -0.3944883294626695], 13);
 
@@ -49,42 +46,31 @@ var camarasTrafic = L.geoJson(camaras, {
         marker.on('click', function () {
             var url = feature.properties.url;
             var descripcion = feature.properties.descripcio;
-            var angulo = feature.properties.angulo;
-            var coordenadas = feature.properties.geo_point_2d.lon;
-            var coordenadas1 = feature.properties.geo_point_2d.lat;
-
+           
             var content = `
-<div  class="p-2">
-    <h3 class="font-bold mb-2">Leyenda:</h3>
-    <div class="legend-item flex items-center mb-2">
-        <div class="ml-4 w-5 h-5 bg-blue-500 border border-black mr-2"></div>
-        <span>Líneas azules: Representan el tráfico</span>
-    </div>
-</div>
+            <div  class="p-2">
+              <h3 class="font-bold mb-2">Leyenda:</h3>
+               <div class="legend-item flex items-center mb-2">
+             <div class="ml-4 w-5 h-5 bg-blue-500 border border-black mr-2"></div>
+             <span>Líneas azules: Representan el tráfico</span>
+              </div>
+              </div>
           
                 <div class="w-96 ml-2">
                  <h3 class="font-bold">Lugar de la cámara:</h3>
                   <div class="flex justify-start p-2 gap-2 ml-2">
                     <i class="fas fa-video text-red-500"></i>
                     <h2>${descripcion}</h2>
-                  </div>
-                   
-           
-                    
+                  </div>          
                 </div>
                 
-
                 <div class="flex mt-5 w-full justify-center">
                  <a href="${url}" class="bg-blue-100 p-2" "target="_blank">Ver video</a>
                 </div>
-              
-            
 
                `;
             document.getElementById('sidebar-content').innerHTML = content;
             document.getElementById('sidebar').style.width = '410px'; // Abre el sidebar
-
-
 
         });
 
