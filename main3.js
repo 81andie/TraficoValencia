@@ -175,5 +175,8 @@ async function init() {
     });
 }
 
+// Añadir geocoder
+
+
 // Iniciar mapa
 init();
