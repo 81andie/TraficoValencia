@@ -8,7 +8,7 @@ async function cargarCamarasExport() {
     const respuesta = await fetch(url);
     const datos = await respuesta.json(); // esto ya es un array plano
 
-     console.log(datos)
+    console.log(datos)
 
 
     if (!Array.isArray(datos)) {
@@ -23,8 +23,8 @@ async function cargarCamarasExport() {
 
             return {
                 type: "Feature",
-                geometry: { 
-                    type: "Point", 
+                geometry: {
+                    type: "Point",
                     coordinates: [f.geo_point_2d.lon, f.geo_point_2d.lat] // [lng, lat]
                 },
                 properties: {
@@ -38,13 +38,13 @@ async function cargarCamarasExport() {
 
     return { type: "FeatureCollection", features };
 
-    }
+}
 
 async function cargarTransitoExport() {
     const url =
         "https://valencia.opendatasoft.com/api/explore/v2.1/catalog/datasets/estat-transit-temps-real-estado-trafico-tiempo-real/exports/json";
     const respuesta = await fetch(url);
-    const datos = await respuesta.json(); 
+    const datos = await respuesta.json();
 
     if (!Array.isArray(datos)) {
         console.error("Error: datos no es un array", datos);
@@ -59,12 +59,12 @@ async function cargarTransitoExport() {
             if (f.geo_point_2d && f.geo_point_2d.lat !== undefined && f.geo_point_2d.lon !== undefined) {
                 lat = f.geo_point_2d.lat;
                 lng = f.geo_point_2d.lon;
-            } 
+            }
             // Si hay geometry.coordinates
             else if (f.geometry && f.geometry.coordinates) {
                 lng = f.geometry.coordinates[0];
                 lat = f.geometry.coordinates[1];
-            } 
+            }
             else {
                 return null;
             }
@@ -101,7 +101,7 @@ async function init() {
     }).addTo(mapa);
 
 
-   
+
 
     // Cargar cámaras
     const camarasData = await cargarCamarasExport();
